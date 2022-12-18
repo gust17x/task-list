@@ -50,7 +50,7 @@ button i {
 
 input,
 select {
-  padding: 0.25rem 0.5rem;
+  padding: 10px;
   color: #333;
   outline: none;
   border: 0;
@@ -82,14 +82,13 @@ option{
 .todo-container header {
   text-align: center;
   padding: 0 1rem 1rem;
-  border-bottom: 1px solid rgb(166, 166, 166);
+
 }
 
 /* Todo Form */
 #todo-form,
 #edit-form {
   padding: 1rem;
-  border-bottom: 1px solid rgb(163, 163, 163);
 }
 
 #todo-form p,
@@ -104,8 +103,11 @@ option{
 
 .form-control input {
   margin-right: 0.3rem;
+  width: 80%;
 }
-
+.form-control button{
+  width: 20%;
+}
 #cancel-edit-btn {
   margin-top: 1rem;
   color: #444;
@@ -114,16 +116,15 @@ option{
 /* Todo Toolbar */
 #toolbar {
   padding: 1rem;
-  border-bottom: 1px solid rgb(149, 149, 149);
+  border-bottom: 1px solid linear-gradient(to right, transparent, black, transparent);
   display: flex;
+
 }
 
 #toolbar h4 {
   margin-bottom: 0.5rem;
 }
-
 #search {
-  border-right: 1px solid #ddd;
   padding-right: 1rem;
   margin-right: 1rem;
   width: 65%;
@@ -203,4 +204,8 @@ option{
     .todo-container{
       padding: 5px;
     }
+}
+
+h4, p{
+  font-weight: 100;
 }
