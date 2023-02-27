@@ -11,15 +11,17 @@ body {
   background-image: url("../img/bg1.jpg");
   background-position: center;
   height: 100vh;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   font-family: 'Roboto', sans-serif;
-font-family: 'Rubik', sans-serif;
-font-family: 'Secular One', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Secular One', sans-serif;
 }
 
 button {
@@ -74,7 +76,7 @@ option{
 .todo-container {
   max-width: 450px;
   margin: 3rem auto 0;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(35px);
   padding: 1.5rem;
   border-radius: 15px;
 }
@@ -208,4 +210,48 @@ option{
 
 h4, p{
   font-weight: 100;
+}
+
+
+.bolhas {
+  position: absolute;
+  display: flex;
+  height: 100%;
+}
+
+.bolhas span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #00d9ff;
+  margin: 0 4pc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #00d9ff06,
+  0 0 10px #00d9ff,
+  0 0 100px #00d9ff;
+  transition: .2s;
+  opacity: 0;
+  animation: animar 5s calc(200s / var(--i)) linear infinite;
+}
+
+@keyframes animar{
+  0% {
+      transform: translateY(100vh) scale(0); 
+  }
+
+  10%{
+    opacity: 1;
+  }
+
+  100%{
+      transform: translateY(-10vh) scale(1.2);
+      opacity: 1;
+  }
+}
+
+.bolhas span:nth-of-type(even) {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 10px #ffffff00,
+  0 0 10px #ffffff,
+  0 0 100px #ffffff;
 }
