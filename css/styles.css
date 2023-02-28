@@ -19,9 +19,7 @@ body {
   align-items: center;
   overflow: hidden;
 
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Secular One', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 button {
